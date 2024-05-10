@@ -10,12 +10,7 @@ app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
 
-app.use((req, res, next)=>
-  {
-    console.log("hello app!!");
-    next();
-  }
-)
+
 //Routing
 app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
